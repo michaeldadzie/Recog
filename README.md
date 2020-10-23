@@ -1,4 +1,6 @@
-Text recognition using Firebase ML Kit
+<h1 align='center'> Muze </h1>
+
+Text recognition app using ML Kit for Firebase
 
 
 ## Building
