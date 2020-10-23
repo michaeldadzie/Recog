@@ -28,14 +28,11 @@ class Recog extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Recog',
       theme: ThemeData(
-        primarySwatch: Colors.deepOrange,
-        pageTransitionsTheme: PageTransitionsTheme(
-          builders: {
+          primarySwatch: Colors.red,
+          pageTransitionsTheme: PageTransitionsTheme(builders: {
             TargetPlatform.android: CustomPageTransitionBuilder(),
             TargetPlatform.iOS: CustomPageTransitionBuilder(),
-          }
-        )
-      ),
+          })),
       home: CameraScreen(),
     );
   }

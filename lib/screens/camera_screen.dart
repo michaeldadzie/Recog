@@ -89,8 +89,7 @@ class _CameraScreenState extends State<CameraScreen> {
                   alignment: Alignment.bottomCenter,
                   child: MaterialButton(
                     padding: EdgeInsets.all(20),
-                    child: Icon(Icons.camera_alt,
-                        size: 30, color: Colors.deepOrange),
+                    child: Icon(Icons.camera_alt, size: 30, color: Colors.red),
                     shape: CircleBorder(),
                     color: Colors.white,
                     onPressed: () async {
