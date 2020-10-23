@@ -15,3 +15,7 @@ To build and run the app on your device, do the following:
 
 The app is made using [Flutter](https://github.com/flutter/flutter) with [ML Kit for Firebase
 ](https://firebase.google.com/docs/ml-kit) for text Recogniztion on captured images
+
+
+## License
+Recog is licensed under the MIT License - see the [license file](LICENSE) to learn more.
