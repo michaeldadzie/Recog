@@ -1,4 +1,4 @@
-<h1 align='center'> Muze </h1>
+<h1 align='center'> Recog </h1>
 
 Text recognition app using ML Kit for Firebase
 
