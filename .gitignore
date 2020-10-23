@@ -31,7 +31,7 @@
 .pub/
 /build/
 
-# Firebase related
+# Firebase Config related
 GoogleService-Info.xml
 google-services.json
 
