@@ -1,0 +1,30 @@
+name: recog
+description: Text recognition using Firebase ML Kit
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  camera: ^0.5.8+9
+  google_fonts: ^1.1.1
+  path_provider: ^1.6.21
+  intl: ^0.16.1
+  firebase_ml_vision: ^0.9.7
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+
+  uses-material-design: true
+
+  # assets:
+  #   - images/a_dot_burr.jpeg
+
