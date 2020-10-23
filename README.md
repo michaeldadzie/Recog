@@ -1,5 +1,6 @@
+<p align='center'> <img alt='Recog logo' height='175px' width='175px' src='https://github.com/michaeldadzie/Recog/blob/master/android/app/src/main/res/drawable/launcher_icon.png'/> </p>
 <h1 align='center'> Recog </h1>
-
+https://github.com/michaeldadzie/Recog/blob/master/android/app/src/main/res/drawable/launcher_icon.png
 Text recognition app using ML Kit for Firebase
 
 
