@@ -1,6 +1,6 @@
 <p align='center'> <img alt='Recog logo'src='https://github.com/michaeldadzie/Recog/blob/master/android/app/src/main/res/drawable/launcher_icon.png'/> </p>
 <h1 align='center'> Recog </h1>
-Text recognition app using ML Kit for Firebase
+Text recognition app using ML Kit for Firebase. The App Recognizes any Email Id on a captured image.
 
 
 ## Building
