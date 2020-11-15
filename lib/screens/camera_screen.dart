@@ -7,6 +7,7 @@ import 'package:path_provider/path_provider.dart';
 import 'package:recog/screens/detail_screen.dart';
 import 'package:recog/widgets/drawer.dart';
 import 'package:recog/widgets/menu_button.dart';
+import 'package:page_transition/page_transition.dart';
 
 class CameraScreen extends StatefulWidget {
   @override
@@ -98,8 +99,10 @@ class _CameraScreenState extends State<CameraScreen> {
                           if (path != null) {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(
-                                builder: (context) => DetailScreen(path),
+                              PageTransition(
+                                type: PageTransitionType.scale,
+                                alignment: Alignment.bottomCenter,
+                                child: DetailScreen(path),
                               ),
                             );
                           }
