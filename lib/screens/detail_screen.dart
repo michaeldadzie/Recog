@@ -85,7 +85,9 @@ class _DetailScreenState extends State<DetailScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: _scaffoldKey,
-      appBar: AppBar(),
+      appBar: AppBar(
+        elevation: 0,
+      ),
       body: _imageSize != null
           ? Stack(
               children: [
@@ -144,7 +146,7 @@ class _DetailScreenState extends State<DetailScreen> {
                                       content: Text(
                                         'Email copied',
                                         style: GoogleFonts.raleway(
-                                            color: Colors.orange),
+                                            color: Colors.amber),
                                       ),
                                       duration: Duration(seconds: 2),
                                     ),
