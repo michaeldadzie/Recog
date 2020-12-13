@@ -73,49 +73,63 @@ class _CameraScreenState extends State<CameraScreen> {
     return Scaffold(
       key: scaffoldKey,
       drawer: MainDrawer(),
-      body: _controller.value.isInitialized
-          ? Stack(children: [
-              CameraPreview(_controller),
-              Positioned(
-                top: 35,
-                left: 10,
+      body: Stack(
+        children: [
+          _controller.value.isInitialized
+              ? Stack(children: [
+                  CameraPreview(_controller),
+                  Padding(
+                    padding: const EdgeInsets.all(20.0),
+                    child: Container(
+                      alignment: Alignment.bottomCenter,
+                      child: MaterialButton(
+                        padding: EdgeInsets.all(20),
+                        child: Icon(Icons.photo_camera_outlined,
+                            size: 30, color: Colors.white),
+                        shape: CircleBorder(),
+                        color: Colors.transparent,
+                        elevation: 0,
+                        onPressed: () async {
+                          await _takePicture().then(
+                            (String path) {
+                              if (path != null) {
+                                Navigator.push(
+                                  context,
+                                  PageTransition(
+                                    type: PageTransitionType.scale,
+                                    alignment: Alignment.bottomCenter,
+                                    child: DetailScreen(path),
+                                  ),
+                                );
+                              }
+                            },
+                          );
+                        },
+                      ),
+                    ),
+                  )
+                ])
+              : Center(
+                  child: CircularProgressIndicator(),
+                ),
+          Positioned(
+            left: 0,
+            right: 0,
+            top: 0,
+            child: AppBar(
+              backgroundColor: Colors.transparent,
+              elevation: 0,
+              leading: Padding(
+                padding: const EdgeInsets.only(left: 10),
                 child: IconButton(
                   icon: menuButton,
                   onPressed: () => scaffoldKey.currentState.openDrawer(),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: Container(
-                  alignment: Alignment.bottomCenter,
-                  child: MaterialButton(
-                    padding: EdgeInsets.all(20),
-                    child: Icon(Icons.camera_alt, size: 30, color: Colors.red),
-                    shape: CircleBorder(),
-                    color: Colors.white,
-                    onPressed: () async {
-                      await _takePicture().then(
-                        (String path) {
-                          if (path != null) {
-                            Navigator.push(
-                              context,
-                              PageTransition(
-                                type: PageTransitionType.scale,
-                                alignment: Alignment.bottomCenter,
-                                child: DetailScreen(path),
-                              ),
-                            );
-                          }
-                        },
-                      );
-                    },
-                  ),
-                ),
-              )
-            ])
-          : Center(
-              child: CircularProgressIndicator(),
             ),
+          )
+        ],
+      ),
     );
   }
 }
