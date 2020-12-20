@@ -28,7 +28,7 @@ class Recog extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Recog',
       theme: ThemeData(
-        primarySwatch: Colors.amber,
+        primarySwatch: Colors.deepPurple,
         pageTransitionsTheme: PageTransitionsTheme(
           builders: {
             TargetPlatform.android: CustomPageTransitionBuilder(),
