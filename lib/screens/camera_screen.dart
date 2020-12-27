@@ -84,7 +84,7 @@ class _CameraScreenState extends State<CameraScreen> {
                       alignment: Alignment.bottomCenter,
                       child: MaterialButton(
                         padding: EdgeInsets.all(20),
-                        child: Icon(Icons.photo_camera_outlined,
+                        child: Icon(Icons.camera_outlined,
                             size: 30, color: Colors.white),
                         shape: CircleBorder(),
                         color: Colors.transparent,
