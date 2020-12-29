@@ -87,6 +87,17 @@ class _DetailScreenState extends State<DetailScreen> {
       key: _scaffoldKey,
       appBar: AppBar(
         elevation: 0,
+        leading: IconButton(
+          icon: Icon(
+            Icons.arrow_back_ios,
+            color: Colors.white,
+          ),
+          splashColor: Colors.transparent,
+          highlightColor: Colors.transparent,
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+        ),
       ),
       body: _imageSize != null
           ? Stack(
